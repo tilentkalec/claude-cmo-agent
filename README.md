@@ -4,7 +4,7 @@ An AI-native marketing operating system built on Claude Code. A CMO orchestrator
 
 ## Why this exists
 
-I run this against my own tech startup across multiple markets. The brand-specific data pullers, copy samples, and memory live in a private repo. This is the brand-agnostic skeleton — the orchestrator, the subagent contracts, the rules, the cron runner — extracted as a reference for other operators building agent systems on Claude Code.
+I run this daily for our tech startup across multiple markets. The brand-specific data pullers, copy samples, and memory live in a private repo. This is the brand-agnostic skeleton — the orchestrator, the subagent contracts, the rules, the cron runner — extracted as a reference for other operators building agent systems on Claude Code.
 
 ## Architecture
 
@@ -86,7 +86,3 @@ The agent files are structured around six principles drawn from Runbear's prompt
 ## License
 
 MIT.
-
-## Credit
-
-Structure inspired by Runbear's [Ultimate Guide to Prompting AI Agents](https://runbear.io/). The Goals / Boundaries / Constraints framing and the "restraint > autonomy" principle come from there.
