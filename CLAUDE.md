@@ -52,7 +52,7 @@ multiple accounts in one run.
 ## Seasonality
 
 See `.claude/rules/seasonality.md`. Rewrite the calendar + worked examples there
-to match your business cycle — the included file is an ed-tech example.
+to match your business cycle — the included file is a worked example you should replace.
 
 ## Project Structure
 

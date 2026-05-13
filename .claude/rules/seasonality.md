@@ -1,8 +1,8 @@
 # Seasonality calendar
 
-> **This file uses ed-tech exam prep as a worked example. Rewrite the calendar + worked examples below for your business cycle.** Every recommendation an agent makes must factor in the current phase, so this file is load-bearing.
+> **This file uses a worked example with a seasonal product cycle. Rewrite the calendar + worked examples below for your business cycle.** Every recommendation an agent makes must factor in the current phase, so this file is load-bearing.
 
-Exam-prep ed-tech has a tight, predictable cycle.
+The example product below has a tight, predictable annual cycle — adapt to yours.
 
 ## Phases
 

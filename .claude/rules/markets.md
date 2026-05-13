@@ -1,6 +1,6 @@
 # Markets — localization invariants
 
-> **This file is an example multi-market setup (5 CEE markets for an ed-tech brand). Replace the table and per-market rules below with your own markets.** The structure — a single canonical source for market codes, languages, currencies, and per-market term/script overrides — is what every subagent reads at session start.
+> **This file is an example multi-market setup. Replace the table and per-market rules below with your own markets.** The structure — a single canonical source for market codes, languages, currencies, and per-market term/script overrides — is what every subagent reads at session start.
 
 Always plural, always all markets configured here unless the brief specifies a subset.
 

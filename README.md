@@ -4,7 +4,7 @@ An AI-native marketing operating system built on Claude Code. A CMO orchestrator
 
 ## Why this exists
 
-I run this against my actual ed-tech brand across 5 markets. The brand-specific data pullers, copy samples, and memory live in a private repo. This is the brand-agnostic skeleton — the orchestrator, the subagent contracts, the rules, the cron runner — extracted as a reference for other operators building agent systems on Claude Code.
+I run this against my own tech startup across multiple markets. The brand-specific data pullers, copy samples, and memory live in a private repo. This is the brand-agnostic skeleton — the orchestrator, the subagent contracts, the rules, the cron runner — extracted as a reference for other operators building agent systems on Claude Code.
 
 ## Architecture
 
@@ -68,7 +68,7 @@ The agent files are structured around six principles drawn from Runbear's prompt
 3. Edit `CLAUDE.md` — fill in the Business Context section with your brand, model, budget, and goal.
 4. Edit `.claude/rules/markets.md` with your markets, languages, currencies, and any per-market term/script overrides.
 5. Edit `.claude/rules/brand-voice.md` with your voice attributes and per-market sample copy.
-6. Edit `.claude/rules/seasonality.md` to match your business cycle (the included file uses ed-tech exam prep as a worked example).
+6. Edit `.claude/rules/seasonality.md` to match your business cycle (the included file uses a worked example you should replace).
 7. Drop your own data-pull scripts (GA4, store/orders, ad platforms) into `scripts/` so the CMO and performance-reviewer can read fresh JSON from `data/`.
 8. Optional: install the launchd plist for daily runs.
    ```
