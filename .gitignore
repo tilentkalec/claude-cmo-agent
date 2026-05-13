@@ -1,0 +1,8 @@
+.env
+data/
+outputs/
+.claude/agent-memory/
+*.log
+.DS_Store
+__pycache__/
+*.pyc

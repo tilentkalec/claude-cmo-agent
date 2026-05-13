@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  launchd plist for the CMO slot runner.
+
+  Before installing:
+    1. Replace <REPO_ROOT> below with the absolute path to your clone, e.g.
+       /Users/yourname/code/claude-cmo-agent
+    2. Adjust the StartCalendarInterval times to your local timezone.
+       launchd uses the system clock — there's no TZ field. If you need a
+       different timezone, either change your system clock or shift the
+       hours here to match.
+    3. Adjust the PATH environment variable to include wherever `claude`
+       is installed on your machine.
+
+  Install with:
+    cp scripts/com.example.cmo-slot.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.example.cmo-slot.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.cmo-slot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string><REPO_ROOT>/scripts/cmo_slot_run.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string><REPO_ROOT></string>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/cmo-slot.out</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/cmo-slot.err</string>
+
+    <!-- Daily AM batch every day (Mon–Sun) at 09:00.
+         Sunday additionally at 18:00 → Re-plan mode for the upcoming week.
+         Times are in the system's local timezone. -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Weekday</key><integer>0</integer><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
+    </array>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <!-- Adjust to include the dir where `claude` is installed -->
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>
